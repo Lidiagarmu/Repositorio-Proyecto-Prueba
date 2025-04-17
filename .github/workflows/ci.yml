@@ -1,0 +1,23 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Instalar dependencias
+        run: |
+          sudo apt-get install -y nodejs npm
+          npm install
+      - name: Ejecutar pruebas
+        run: npm test
+
+

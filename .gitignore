@@ -1,0 +1,5 @@
+# Ignorar archivo de errores
+error.log
+
+# Ignorar configuración local
+config.local.json
